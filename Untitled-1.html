@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Grouping Form Data with Fieldset</h2>
+
+<p>The fieldset element is used to group related data in a form, and the legend element defines a caption for the fieldset element.</p>
+
+<form action="/action_page.php">
+  <fieldset>
+    <legend>Personalia:</legend>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="John" required autocomplete="on"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" placeholder="Doe" autocomplete="off"><br><br>
+    <input type="submit" value="Submit"><br>
+    <label for="phone">Enter a phone number:</label><br>
+  <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br>
+  <small>Format: 123-45-678</small><br><br>
+  <input type="submit" value="Submit">
+  </fieldset>
+</form>
+<p>The list attribute refers to a datalist element that contains pre-defined options for an input element.</p>
+<form action="/action_page.php">
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+        <option value="Edge"></option>
+        <option value="Firefox"></option>
+        <option value="Chrome"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+    </datalist>
+    <input type="submit" value="Submit">
+</form>
+<form>
+    <label>Choise favorite your car</label>
+    <select>
+        <optgroup label="SwedishCars">
+            <option value="Volvo">Volvo</option>
+            <option value="Saab">Saab</option>
+        </optgroup>
+        <optgroup label="GermanCars">
+            <option value="Opera">Opera</option>
+            <option value="Safari">Safari</option>
+        </optgroup>
+    </select>
+</form>
+
+<h2>Range Field</h2>
+
+<p>Depending on browser support: The input type "range" can be displayed as a slider control.</p>
+
+<form oninput="x.value=parseInt(a.value)">
+    <label for="vol">Volume (between 0 and 100):</label>
+    <input type="range" name="a" min="0" max="100" value="30">
+  <output name="x" for="a b"></output>
+</form>
+</body>
+</html>
